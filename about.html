@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    .hero-wrapper {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+    .hero-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(60%);
+    }
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+    }
+    .developer-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #0d6efd;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+    .motto {
+      font-style: italic;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Siquijor Seawater Inshore Port and Spot Info</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="fishing-spot.html">Fishing Spot</a></li>
+          <li class="nav-item"><a class="nav-link" href="fishing-port.html">Fishing Port</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.php">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section using local image -->
+  <div class="hero-wrapper">
+    <img src="fishbg.jpg" alt="Fishing Hero Background">
+    <div class="hero-text">
+      <h1 class="display-4 fw-bold">Discover Siquijor’s Fishing Wonders</h1>
+      <p class="lead">Where culture, ocean, and livelihood unite in beauty and purpose.</p>
+    </div>
+  </div>
+
+  <!-- About Fishing in Siquijor -->
+  <section class="container py-5">
+    <h2 class="text-center mb-4">About Siquijor Fishing Spots and Ports</h2>
+    <p class="fs-5 text-justify">
+      Siquijor, a serene island in the Visayas region of the Philippines, is home to breathtaking natural beauty and rich marine life. Its tranquil waters are perfect for fishing, attracting both seasoned anglers and curious travelers. Among the island’s jewels are its fishing spots like the Gabayan Bay, Tulapos Marine Sanctuary, and Salagdoong waters, where fishermen enjoy a peaceful and bountiful catch.
+    </p>
+    <p class="fs-5 text-justify">
+      Two of the island’s vital entry points — Siquijor Port and Larena Port — serve not just as transportation hubs but also as active fishing areas. Siquijor Port, located in the capital, is ideal for easy access and offers stunning sunset views over calm harbors. Meanwhile, Larena Port, the larger of the two, buzzes with both trade and traditional fishing activities. These ports symbolize the balance between modern logistics and age-old fishing traditions that define the island.
+    </p>
+    <p class="fs-5 text-justify">
+      Siquijor's fishing culture is rooted in community, sustainability, and respect for nature. Whether you're casting a line at dawn or watching boats come in at sunset, Siquijor’s fishing experience is more than just a livelihood — it’s a lifestyle, a legacy, and a celebration of island life.
+    </p>
+  </section>
+
+  <!-- About Developer -->
+  <section class="bg-light py-5">
+    <div class="container text-center">
+      <h2 class="mb-4">About the Developer</h2>
+      <img src="me.jpg" alt="Karl Stephen Canete" class="developer-img mb-3" />
+      <h4 class="fw-bold">Karl Stephen Canete</h4>
+      <p class="mb-1"><strong>BSIT Student</strong></p>
+      <p class="mb-1">Age: 24</p>
+      <p class="mb-1">Birthday: November 11, 2000</p>
+      <p class="mb-1">Address: Gabayan, Lazi, Siquijor</p>
+      <p class="mb-1">Contact Number: 09063024930</p>
+      <p class="mb-1">Email: kakang14312@gmail.com</p>
+      <p class="motto mt-3">"A student with a vision, an angler with a mission."</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-3">
+    <div class="container">
+      &copy; <?php echo date("Y"); ?> 2025 Siquijor Fishing Site | All Rights Reserved
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

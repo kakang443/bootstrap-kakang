@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fishing Spot</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body > section.container {
+      flex-grow: 1; /* Main content takes remaining vertical space */
+    }
+
+    .spot-img {
+      height: 250px;
+      object-fit: cover;
+      border-radius: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    a.text-decoration-none:hover h5 {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #0d6efd;
+      color: white;
+      padding: 20px 0;
+      margin-top: 50px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Siquijor Seawater Inshore Port and Spot Info</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="fishing-spot.html">Fishing Spot</a></li>
+          <li class="nav-item"><a class="nav-link" href="fishing-port.html">Fishing Port</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Gallery -->
+  <section class="container py-5">
+    <h2 class="text-center mb-4">Fishing Spot Gallery</h2>
+    <div class="row g-4 justify-content-center">
+
+      <!-- Card 1 -->
+      <div class="col-12 col-sm-6 col-lg-4 text-center">
+        <a href="spot1.html" class="text-decoration-none">
+          <img src="gabayan.jpg" alt="Spot 1" class="img-fluid spot-img" />
+          <h5>Catamboan Riprap and Mangrooves Spot </h5>
+        </a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-12 col-sm-6 col-lg-4 text-center">
+        <a href="spot2.html" class="text-decoration-none">
+          <img src="min1.jpg" alt="Spot 2" class="img-fluid spot-img" />
+          <h5>Talayong Spot</h5>
+        </a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-12 col-sm-6 col-lg-4 text-center">
+        <a href="spot3.html" class="text-decoration-none">
+          <img src="saw.jpg.jpg" alt="Spot 3" class="img-fluid spot-img" />
+          <h5>Sawang Spot</h5>
+        </a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-12 col-sm-6 col-lg-4 text-center">
+        <a href="spot4.html" class="text-decoration-none">
+          <img src="minalulan.jpg" alt="Spot 4" class="img-fluid spot-img" />
+          <h5>Minalulan Spot</h5>
+        </a>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Siquijor Fishing Site. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
