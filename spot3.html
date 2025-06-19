@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sunset Harbor - Fishing Port</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    /* Hover effect on thumbnails */
+    .thumbnail-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .thumbnail-img:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 576px) {
+      .thumbnail-img {
+        height: 150px;
+      }
+      section.container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .btn-lg {
+        width: 100%;
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">Siquijor Seawater Inshore Port and Spot Info</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="fishing-spot.html">Fishing Spot</a></li>
+          <li class="nav-item"><a class="nav-link active" href="fishing-port.html">Fishing Port</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <section class="container py-5">
+    <h2 class="text-center mb-4">Sawang Spot</h2>
+    <p class="text-center mb-5">
+      The Larena Fish Port, situated in Barangay Taculing, Larena, Siquijor, serves as a vital hub for both local fishermen and travelers. Beyond its role in fish landing and trading, it also functions as a passenger port, connecting Siquijor to neighboring islands like Dumaguete and Cebu. The port is renowned for its picturesque views of the sea and surrounding hills, making it a welcoming gateway to the island.
+    </p>
+    
+    <div class="row g-3 justify-content-center">
+      <!-- Thumbnails -->
+      <div class="col-6 col-md-4 col-lg-3 text-center">
+        <img src="saw.jpg.jpg" alt="Where boats rest, and dreams set sail" class="img-fluid rounded thumbnail-img" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="saw.jpg.jpg" data-bs-desc="Where boats rest, and dreams set sail" />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 text-center">
+        <img src="saw1.jpg.jpg" alt="Sunset Harbor during golden hour" class="img-fluid rounded thumbnail-img" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="saw1.jpg.jpg" data-bs-desc="Nature’s calm, a fisher’s charm." />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 text-center">
+        <img src="saw2.jpg.jpg" alt="Sunset Harbor during golden hour" class="img-fluid rounded thumbnail-img" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="saw2.jpg.jpg" data-bs-desc="Where the sea meets serenity." />
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 text-center">
+        <img src="saw3.jpg.jpg" alt="Sunset Harbor during golden hour" class="img-fluid rounded thumbnail-img" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="saw3.jpg.jpg" data-bs-desc="Breathe the breeze, hook with ease" />
+      </div>
+      
+      
+    </div>
+
+    <!-- Catch Button Below -->
+    <div class="text-center mt-5">
+      <a href="spotcatch3.html" class="btn btn-success btn-lg">Fish You Can Catch</a>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="imageModalLabel">Sunset Harbor</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img id="modalImage" src="as.jpg" alt="Sunset Harbor large" class="img-fluid rounded mb-3" />
+          <p id="modalDesc" class="fs-5"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer (matching your index.php style) -->
+  <footer class="bg-primary text-white text-center py-3 mt-5">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Fishing Site. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // When a thumbnail is clicked, update modal image and description
+    const imageModal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalDesc = document.getElementById('modalDesc');
+
+    imageModal.addEventListener('show.bs.modal', event => {
+      const trigger = event.relatedTarget;
+      const imgSrc = trigger.getAttribute('data-bs-img');
+      const imgDesc = trigger.getAttribute('data-bs-desc');
+
+      modalImage.src = imgSrc;
+      modalDesc.textContent = imgDesc;
+    });
+  </script>
+</body>
+</html>
